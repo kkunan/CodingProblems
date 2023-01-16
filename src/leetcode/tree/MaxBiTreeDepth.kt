@@ -2,6 +2,7 @@ package leetcode.tree
 
 import java.lang.Integer.max
 
+// https://leetcode.com/explore/featured/card/top-interview-questions-easy/94/trees/555/
 fun maxDepth(root: TreeNode?): Int {
     if (root == null) {
         return 0
@@ -13,9 +14,4 @@ fun maxDepth(root: TreeNode?): Int {
     }
 
     return max(maxDepth(root.left), maxDepth(root.right)) + 1
-}
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
